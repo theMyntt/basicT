@@ -19,19 +19,46 @@ nav ul li span {
 aside {
 	background-color: #E5EEFD;
 	width: 200px;
-	height: 100vh
+	/*height: 100vh;*/
+	padding: 20px 20px 0 20px;
 }
 
+aside nav ul {
+	list-style-type: none;
+}
+
+aside nav ul li {
+	text-decoration: underline;
+}
 /*aside {
 	padding: 0 0 0 20px;	
 }*/
 
-form {
+main, form {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
+	flex-direction: column
 }
+
+input {
+	padding: 0 10px;
+}
+
+.choice {
+	width: 60px;
+	height: 60px;
+	margin: 10px
+}
+
+.grid-column {
+	display: flex;
+	flex-direction: column;
+	float: left;
+	max-width: 150px;
+}
+
 
 fieldset {
 	padding: 30px;
@@ -47,4 +74,13 @@ legend {
 
 label {
 	display: grid;
+}
+
+.form-input {
+	height: 25px;
+	width: 150px;
+}
+
+form label button {
+	width: 100%;
 }
