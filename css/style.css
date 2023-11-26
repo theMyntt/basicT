@@ -1,0 +1,50 @@
+* {
+	font-family: Calibri, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	display:flex;
+}
+
+main {
+	width: 100vw;
+}
+
+nav ul li span {
+	cursor: pointer;
+}
+
+aside {
+	background-color: #E5EEFD;
+	width: 200px;
+	height: 100vh
+}
+
+/*aside {
+	padding: 0 0 0 20px;	
+}*/
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+fieldset {
+	padding: 30px;
+}
+
+fieldset, input {
+	border: 1px solid #000;
+}
+
+legend {
+	padding: 0 4px;
+}
+
+label {
+	display: grid;
+}

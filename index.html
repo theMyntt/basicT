@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>basicT</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div id="wrapper">
+		<aside>
+			<p>basicT</p>
+			<nav>
+				<ul>
+					<li><span id="refresh">Recarregar a pagina</span></li>
+					<li><span id="back">Voltar</span></li>
+					<li><span id="go">Ir para frente</span></li>
+				<ul>
+			</nav>
+		</aside>
+
+		<main>
+			<form method="post" action="login.php">
+				<fieldset>
+					<legend>Login</legend>
+					<div class="input-control">
+						<label>Código de ID <input type="number" name="id" minlength="6" required> </label>
+						<label>Senha <input type="password" name="pass" minlength="8" required> </label>
+						<label>Entrar <button type="submit">Entrar</button>
+					</div>
+				</fieldset>
+			</form>		
+		</main>
+	</div>
+</body>
+
+<script>
+	const back = document.getElementById("back");
+	const go = document.getElementById("go");
+	const refresh = document.getElementById("refresh");
+
+	back.addEventListener("click", () => { window.history.back(); });
+	go.addEventListener("click", () => { window.history.forward(); });
+	refresh.addEventListener("click", () => { location.reload(); });
+
+</script>
+
+</html>
