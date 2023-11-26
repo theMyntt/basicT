@@ -10,7 +10,7 @@
 <body>
 	<div id="wrapper">
 		<aside>
-			<p>basicT</p>
+			<h2 style="font-weight: 200">basicT PDV</h2> <br />
 			<nav>
 				<ul>
 					<li><span id="refresh">Recarregar a pagina</span></li>
@@ -25,9 +25,9 @@
 				<fieldset>
 					<legend>Login</legend>
 					<div class="input-control">
-						<label>Código de ID <input type="number" name="id" minlength="6" required> </label>
-						<label>Senha <input type="password" name="pass" minlength="8" required> </label>
-						<label>Entrar <button type="submit">Entrar</button>
+						<label>Código de ID <input type="text" name="id" class="form-input" minlength="6" placeholder="Digite aqui seu ID!" required> </label> <br />
+						<label>Senha <input type="password" name="pass" class="form-input" minlength="8" placeholder="Digite aqui sua senha!" required> </label> <br />
+						<label>Entrar <input type="submit" class="form-input" value="Entrar" style="width:100%" />
 					</div>
 				</fieldset>
 			</form>		
