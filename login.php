@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include "./db.php";
 
@@ -12,10 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	$stmt->bindParam(":id", $id);
 	$stmt->bindParam(":pass", $pass);
 	$stmt->execute();
-		  
+	
+	//$stmt = $db->query($query);
+
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-	if ($rows == NULL) {
+	if ($rows == null) {
 		echo "
 		<p>ID ou Senha incorreta</p>
 		<p>Voltando em alguns segundos</p>
@@ -25,7 +28,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 			window.history.back()
 		}, 2000)</script>";
 	}
-	else if ($rows[0]["ID_USER"] === $id && $rows[0]["PW_USER"] === $pass) {
+	else if ($rows[0]["ID_USER"] == $id && $rows[0]["PW_USER"] == $pass) {
+		$_SESSION["NAME"] = $rows[0]["NM_USER"];
+
+		$db->query("UPDATE USER SET LG_USER = DATE('NOW') WHERE ID_USER = $id");
+		//$stmp->bindParam(":id", $id);
+
 		echo "<script>location.href = './painel/'</script>";
 	}
 }
