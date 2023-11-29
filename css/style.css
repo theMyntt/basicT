@@ -52,6 +52,19 @@ input {
 	margin: 10px
 }
 
+table {
+	border-collapse: collapse;
+	width: 70%;
+}
+th, td {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+th {
+	background-color: #E5EEFD;
+}
+
 .grid-column {
 	display: flex;
 	flex-wrap: wrap;
