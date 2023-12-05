@@ -29,7 +29,7 @@
 				<div class="grid-column">
 					<button class="choice" onclick="location.href = './newSale/'">Nova venda</button>
 					<button class="choice" onclick="location.href = './hisSale/'">Histórico de Vendas</button>
-					<button class="choice">Histórico de Acessos</button>
+					<button class="choice" onclick="location.href = './hisLogin'">Histórico de Acessos</button>
 					<button class="choice" onclick="location.href = '../'">Sair</button>
 				</div>
 			</fieldset>

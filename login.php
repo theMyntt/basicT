@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		$_SESSION["NAME"] = $rows[0]["NM_USER"];
 		$_SESSION["ID"] = $id;
 
-		$db->query("UPDATE USER SET LG_USER = DATE('NOW') WHERE ID_USER = $id");
+		$db->query("INSERT INTO ACCESS(USER_ID_USER, DT_ACCESS) VALUES ($id, DATE('now'))");
 		//$stmp->bindParam(":id", $id);
 
 		echo "<script>location.href = './painel/'</script>";
