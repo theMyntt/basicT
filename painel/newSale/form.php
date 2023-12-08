@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-$db = new PDO("sqlite:../../data/user.db");
+$caminhoAbsoluto = dirname(__FILE__) . '/../../data/user.db';
+$db = new PDO("sqlite:$caminhoAbsoluto");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $prod = $_POST["prod"];

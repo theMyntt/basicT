@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
-<?php $db = new PDO("sqlite:..//..//data//user.db"); ?>
+<?php
+$caminhoAbsoluto = dirname(__FILE__) . '/../../data/user.db';
+$db = new PDO("sqlite:$caminhoAbsoluto");
+?>
 
 <html lang="pt-br">
 <head>
