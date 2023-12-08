@@ -24,5 +24,8 @@ Se deseja contribuir para o projeto, siga os passos abaixo.
 - De push em sua branch
 - Envie um pull request
 
+## Download (Uso Pessoal)
+[Ultimas versões](https://github.com/theMyntt/basicT/releases)
+
 ## Licença
 Este projeto é licenciado pela [Licença MIT](./LICENSE)
