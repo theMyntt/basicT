@@ -2,7 +2,7 @@
 Um programa de Ponto de Venda portátil desenvolvido com PHP e SQLite para Windows e Linux.
 
 ## Pré-requisitos (Desenvolvimento)
-- PHP (Versão 5.1.0)
+- PHP (Versão mínima: 5.1.0)
 - SQLite (Preferencial ultima versão)
 - Ativar a extensão "sqlite3" no php.ini
 
@@ -23,6 +23,9 @@ Se deseja contribuir para o projeto, siga os passos abaixo.
 - Faça commit das alterações
 - De push em sua branch
 - Envie um pull request
+
+## Download (Uso Pessoal)
+[Ultimas versões](https://github.com/theMyntt/basicT/releases)
 
 ## Licença
 Este projeto é licenciado pela [Licença MIT](./LICENSE)
