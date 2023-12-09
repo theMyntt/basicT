@@ -2,7 +2,7 @@
 Um programa de Ponto de Venda portátil desenvolvido com PHP e SQLite para Windows e Linux.
 
 ## Pré-requisitos (Desenvolvimento)
-- PHP (Versão 5.1.0)
+- PHP (Versão mínima: 5.1.0)
 - SQLite (Preferencial ultima versão)
 - Ativar a extensão "sqlite3" no php.ini
 
