@@ -6,34 +6,54 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="../css/style.css" />
-	<script src="../js/script.js" defer></script>
+	<link rel="stylesheet" href="../css/materialize.min.css" />
 	<title>basicT</title>
+	<style>
+		nav ul li {
+			height: 64px;
+			display: flex;
+			align-items: center;
+		}
+		img {
+			display: flex;
+			align-self: center;
+		}
+	</style>
 </head>
 <body>
 	<div id="wrapper">
-		<aside>
-			<h2 style="font-weight: 200">basicT PDV</h2> <br />
-			<nav>
-				<ul>
-					<li><span id="refresh">Recarregar a pagina</span></li>
-					<li><span id="back">Voltar</span></li>
-					<li><span id="go">Ir para frente</span></li>
-				<ul>
-			</nav>
-		</aside>
-		<main>
-			<h2>Bem vindo, <?php echo $_SESSION["NAME"]; ?></h2>
-			<fieldset>
-				<legend>Menu</legend>
-				<div class="grid-column">
-					<button class="choice" onclick="location.href = './newSale/'">Nova venda</button>
-					<button class="choice" onclick="location.href = './hisSale/'">Histórico de Vendas</button>
-					<button class="choice" onclick="location.href = './hisLogin'">Histórico de Acessos</button>
-					<button class="choice" onclick="location.href = '../'">Sair</button>
+		<nav class="blue darken-2">
+			<div class="nav-wrapper">
+				<div>
+					<a href="./" class="brand-logo" style="margin-left: 1cm">basicT</a>
 				</div>
-			</fieldset>
-		</main>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="./"><img src="../img/home.png"></a></li>
+					<li><a onclick="window.history.back();"><img src="../img/arrowBack.png"></a></li>
+					<li><a onclick="window.history.forward();"><img src="../img/arrowFoward.png"></a></li>
+					<li><a href="./"><img src="../img/refresh.png" alt="Recarregar"></a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
+			<h4>Bem vindo, <?php echo $_SESSION["NAME"]; ?></h4>
+			<div class="card-panel">
+				<h5>Menu rápido</h5>
+				<div class="row">
+					<button class="btn blue darken-2" onclick="location.href = './newSale/'">Nova venda</button>
+					<button class="btn blue darken-2" onclick="location.href = './hisSale/'">Histórico de Vendas</button>
+					<button class="btn blue darken-2" onclick="location.href = './hisLogin'">Histórico de Acessos</button>
+					<button class="btn blue darken-2" onclick="location.href = '../'">Sair</button>
+				</div>
+			</div>
+			<div class="card-panel">
+				<h5>Configurações do sistema</h5>
+				<div class="row">
+					<button class="btn blue darken-2">Cadastrar usuário</button>
+					<button class="btn blue darken-2">Deletar usuário existente</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 </body>

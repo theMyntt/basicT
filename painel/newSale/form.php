@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bindParam(':price', $price);
         $stmt->execute();
 
-        echo "<script>location.href = './'</script>";
+        echo "<script>location.href = '../'</script>";
     } else {
         echo "Erro: ID do usuário não encontrado na sessão.";
     }

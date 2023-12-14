@@ -8,23 +8,44 @@ $db = new PDO("sqlite:$caminhoAbsoluto");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/style.css" />
-    <script src="../../js/script.js" defer></script>
+    <link rel="stylesheet" href="../../css/materialize.min.css" />
     <title>basicT</title>
+    <style>
+		nav ul li {
+			height: 64px;
+			display: flex;
+			align-items: center;
+		}
+		img {
+			display: flex;
+			align-self: center;
+		}
+        textarea {
+            border: 0;
+            border-bottom: 1px solid #9e9e9e;
+            resize: vertical;
+        }
+        textarea:focus {
+            outline: 0;
+        }
+	</style>
 </head>
 <body>
     <div id="wrapper">
-        <aside>
-			<h2 style="font-weight: 200">basicT PDV</h2> <br />
-			<nav>
-				<ul>
-					<li><span id="refresh">Recarregar a pagina</span></li>
-					<li><span id="back">Voltar</span></li>
-					<li><span id="go">Ir para frente</span></li>
-				<ul>
-			</nav>
-		</aside>
-        <main>
+    <nav class="blue darken-2">
+			<div class="nav-wrapper">
+				<div>
+					<a href="./" class="brand-logo" style="margin-left: 1cm">basicT</a>
+				</div>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="../"><img src="../../img/home.png"></a></li>
+					<li><a onclick="window.history.back();"><img src="../../img/arrowBack.png"></a></li>
+					<li><a onclick="window.history.forward();"><img src="../../img/arrowFoward.png"></a></li>
+					<li><a href="./"><img src="../../img/refresh.png" alt="Recarregar"></a></li>
+				</ul>
+			</div>
+		</nav>
+        <div class="container">
             <?php 
             $query = "SELECT * FROM SALE";
             $stmt = $db->query($query);
@@ -52,7 +73,7 @@ $db = new PDO("sqlite:$caminhoAbsoluto");
                 echo 'Não há dados a serem exibidos.';
             }
             ?>
-        </main>
+        </div>
     </div>
 </body>
 </html>

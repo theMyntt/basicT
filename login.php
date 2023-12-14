@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "db.php";
+$db = new PDO("sqlite:data//user.db");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	$id = $_POST["id"];
