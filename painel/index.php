@@ -49,7 +49,7 @@
 			<div class="card-panel">
 				<h5>Configurações do sistema</h5>
 				<div class="row">
-					<button class="btn blue darken-2">Cadastrar usuário</button>
+					<button class="btn blue darken-2" onclick="location.href='./cadUser/'">Cadastrar usuário</button>
 					<button class="btn blue darken-2">Deletar usuário existente</button>
 				</div>
 			</div>
