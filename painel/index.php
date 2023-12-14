@@ -42,7 +42,7 @@
 				<div class="row">
 					<button class="btn blue darken-2" onclick="location.href = './newSale/'">Nova venda</button>
 					<button class="btn blue darken-2" onclick="location.href = './hisSale/'">Histórico de Vendas</button>
-					<button class="btn blue darken-2" onclick="location.href = './hisLogin'">Histórico de Acessos</button>
+					<button class="btn blue darken-2" onclick="location.href = './hisLogin/'">Histórico de Acessos</button>
 					<button class="btn blue darken-2" onclick="location.href = '../'">Sair</button>
 				</div>
 			</div>
