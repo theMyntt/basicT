@@ -49,7 +49,7 @@ $db = new PDO("sqlite:$caminhoAbsoluto");
             <form action="process.php" method="post" style="margin-bottom: 30px">
                 <h4>Qual usuário deseja excluir?</h4>
                 <label> ID <input type="text" name="id" placeholder="Digite aqui o ID!" /> </label>
-                <input type="submit" class="btn blue darken-2" value="remover">
+                <input type="submit" class="btn blue darken-2" value="remover" style="width: 100%">
             </form>
             <div class="card-panel">
             <?php 
