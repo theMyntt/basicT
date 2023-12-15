@@ -53,7 +53,7 @@ $db = new PDO("sqlite:$caminhoAbsoluto");
             </form>
             <div class="card-panel">
             <?php 
-            $query = "SELECT ID_USER, NM_USER, CP_USER FROM USER";
+            $query = "SELECT ID_USER AS 'Indentificador', NM_USER AS 'Nome do Usuário', CP_USER AS 'Telefone do usuário' FROM USER";
             $stmt = $db->query($query);
 
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -47,12 +47,12 @@ $db = new PDO("sqlite:$caminhoAbsoluto");
 		</nav>
         <div class="container">
             <?php 
-            $query = "SELECT * FROM SALE";
+            $query = "SELECT ID_SALE AS 'Indentificador', PR_SALE AS 'Produtos', USER_ID_USER AS 'Quem vendeu', FP_SALE AS 'Preço final' FROM SALE";
             $stmt = $db->query($query);
 
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            if (count($rows) > 0) {
+            if (count($rows) > 0 && $stmt !== false) {
                 echo '<table>';
                 echo '<tr>';
                 foreach ($rows[0] as $columnName => $value) {

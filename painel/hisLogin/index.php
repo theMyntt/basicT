@@ -48,12 +48,12 @@ $db = new PDO("sqlite:$caminhoAbsoluto");
 		</nav>
 	<div class="container">
 		<?php 
-            $query = "SELECT * FROM ACCESS";
+            $query = "SELECT ID_ACCESS AS 'Indentificador', USER_ID_USER AS 'Usuário que entrou', DT_ACCESS AS 'Data de acesso' FROM ACCESS";
             $stmt = $db->query($query);
 
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            if (count($rows) > 0) {
+            if (count($rows) > 0 && $stmt !== false) {
                 echo '<table>';
                 echo '<tr>';
                 foreach ($rows[0] as $columnName => $value) {
