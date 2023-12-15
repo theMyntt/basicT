@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/materialize.min.css">
+    <script src="../../js/script.js" defer></script>
     <title>basicT</title>
     <style>
-		nav ul li {
-			height: 64px;
-			display: flex;
-			align-items: center;
-		}
-		img {
-			display: flex;
-			align-self: center;
-		}
+        nav ul li {
+            height: 64px;
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            display: flex;
+            align-self: center;
+        }
+
         textarea {
             border: 0;
             border-bottom: 1px solid #9e9e9e;
             resize: vertical;
         }
+
         textarea:focus {
             outline: 0;
         }
-	</style>
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        label {
+            width: 49%
+        }
+
+        #saleInput {
+            display: none;
+        }
+        #disp button {
+            margin-right: 5px;
+        }
+        #disp button:last-child {
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
     <div id="wrapper">
         <nav class="blue darken-2">
-			<div class="nav-wrapper">
-				<div>
-					<a href="./" class="brand-logo" style="margin-left: 1cm">basicT</a>
-				</div>
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="../"><img src="../../img/home.png"></a></li>
-					<li><a onclick="window.history.back();"><img src="../../img/arrowBack.png"></a></li>
-					<li><a onclick="window.history.forward();"><img src="../../img/arrowFoward.png"></a></li>
-					<li><a href="./"><img src="../../img/refresh.png" alt="Recarregar"></a></li>
-				</ul>
-			</div>
-		</nav>
+            <div class="nav-wrapper">
+                <div>
+                    <a href="../" class="brand-logo" style="margin-left: 1cm">basicT</a>
+                </div>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="../"><img src="../../img/home.png"></a></li>
+                    <li><a onclick="window.history.back();"><img src="../../img/arrowBack.png"></a></li>
+                    <li><a onclick="window.history.forward();"><img src="../../img/arrowFoward.png"></a></li>
+                    <li><a href="./"><img src="../../img/refresh.png" alt="Recarregar"></a></li>
+                </ul>
+            </div>
+        </nav>
         <div class="container">
             <form action="form.php" method="post">
-                <div class="card-panel">
+                <div class="card-panel" id="products">
                     <h5>Nova venda</h5>
-                    <label>Insira os produtos: <textarea name="prod" id="products" cols="30" rows="10" sty></textarea></label> <br />
-                    <label>Insira o preço final: <input type="text" name="price" id="price"></label> <br />
-                    <input type="submit" value="Vender" class="btn blue darken-2" style="width: 100%">
+                    <p>Preço final: <span id="fp">R$0.00</span></p>
+                    <div class="flex">
+                        <label>Insira o produto: <input name="prod" type="text" class="prods"></label>
+                        <label>Insira o preço: <input type="text" name="price" class="price"></label>
+                    </div>
                 </div>
+                <div style="display: flex;" id="disp">
+                    <button onclick="createProduct()" class="btn blue darken-2" type="button">Adicionar produto</button>
+                    <button onclick="calcPrice();" class="btn green darken-1" type="button">Calcular preço</button>
+                    <input type="submit" value="Vender" class="btn green darken-1" id="saleInput">
+                </div>
+                <input type="hidden" name="total_price" id="total_price" value="0">
+                <input type="hidden" name="products_data" id="products_data" value="">
             </form>
         </div>
     </div>
 </body>
+
 </html>

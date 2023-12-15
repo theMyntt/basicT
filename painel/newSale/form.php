@@ -5,17 +5,11 @@ $caminhoAbsoluto = dirname(__FILE__) . '/../../data/user.db';
 $db = new PDO("sqlite:$caminhoAbsoluto");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $prod = $_POST["prod"];
-    $price = $_POST["price"];
+    $prod = $_POST["products_data"];
+    $price = $_POST["total_price"];
     $id = $_SESSION["ID"];
 
-    $products = explode(" ", $prod);
-    $final = '';
-
-    foreach ($products as $product) {
-        $final .= $product . " ";
-    }
-    echo $final;
+    $final = str_replace(" ", "\n<br/>", $prod);
 
     if(isset($_SESSION["ID"]) && !empty($_SESSION["ID"])) {
         $id = $_SESSION["ID"];
@@ -27,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bindParam(':price', $price);
         $stmt->execute();
 
-        echo "<script>location.href = '../'</script>";
+        echo "<script>alert('Venda computada com sucesso');location.href = '../'</script>";
     } else {
         echo "Erro: ID do usuário não encontrado na sessão.";
     }
