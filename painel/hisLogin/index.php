@@ -74,6 +74,7 @@ $db = new PDO("sqlite:$caminhoAbsoluto");
                 echo 'Não há dados a serem exibidos.';
             }
         ?>
+        <button class="btn blue darken-2" onclick="window.history.back();">Voltar</button> 
 	</div>
 	</div>
 </body>
