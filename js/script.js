@@ -40,10 +40,12 @@ function calcPrice() {
             prod += prods[i].value + " ";    
         }
     }
+    prod = prod.toUpperCase();
 
     document.getElementById("fp").textContent = "R$" + fp;
     document.getElementById("total_price").value = fp;
     document.getElementById("products_data").value = prod;
 
     document.getElementById("saleInput").style.display = "block";
+    document.getElementById("calcPriceBtn").style.display = "none";
 }
