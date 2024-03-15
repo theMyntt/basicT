@@ -7,18 +7,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="../css/materialize.min.css" />
+	<link rel="stylesheet" href="../css/style.css" />
 	<title>basicT</title>
-	<style>
-		nav ul li {
-			height: 64px;
-			display: flex;
-			align-items: center;
-		}
-		img {
-			display: flex;
-			align-self: center;
-		}
-	</style>
 </head>
 <body>
 	<div id="wrapper">

@@ -1,3 +1,5 @@
+<? session_start(); ?>
+
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -7,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>basicT</title>
 	<link rel="stylesheet" href="css/materialize.min.css" />
+	<link rel="stylesheet" href="css/style.css">
 	<style>
 		nav ul li {
 			height: 64px;
@@ -29,8 +32,8 @@
 			</div>
 		</nav>
 		<div class="container">
-			<form method="post" action="login.php"
-				style="display: flex; align-items: center;justify-content: center; height: 93vh;">
+			<form method="post" action="login.php" id="login-form"
+				style="">
 				<div class="card-panel">
 					<div class="input-control" style="display: block;">
 						<label>Código de ID <input type="text" name="id" minlength="6" placeholder="Digite aqui seu ID!"

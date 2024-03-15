@@ -1,0 +1,43 @@
+nav ul li {
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+img {
+  display: flex;
+  align-self: center;
+}
+textarea {
+  border: 0;
+  border-bottom: 1px solid #9e9e9e;
+  resize: vertical;
+}
+textarea:focus {
+  outline: 0;
+}
+
+#login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(93vh - 63.993px);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  width: 49%;
+}
+
+#saleInput {
+  display: none;
+}
+#disp button {
+  margin-right: 5px;
+}
+#disp button:last-child {
+  margin: 0;
+}
