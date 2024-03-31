@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (isset($_SESSION["ID"])) {
+	echo "<script>location.href='./painel'</script>";
+}
+?>
+
 <!DOCTYPE html>
 
 <html lang="pt-br">
