@@ -1,4 +1,10 @@
 <?php 
+session_start();
+
+if (!isset($_SESSION["ID"])) {
+	echo "<script>location.href='exit'</script>";
+}
+
 $caminhoAbsoluto = dirname(__FILE__) . '/../../data/user.db';
 $db = new PDO("sqlite:$caminhoAbsoluto");
 ?>
