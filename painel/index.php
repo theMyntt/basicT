@@ -1,11 +1,4 @@
-<?php 
-session_start(); 
-
-if (!isset($_SESSION["EMAIL"])) {
-	header("Location: ./");
-	exit();
-}
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 
@@ -14,7 +7,7 @@ if (!isset($_SESSION["EMAIL"])) {
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="../css/materialize.min.css" />
-	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/style.css">
 	<title>basicT</title>
 </head>
 <body>

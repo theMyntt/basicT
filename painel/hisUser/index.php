@@ -1,11 +1,4 @@
 <?php 
-session_start(); 
-
-if (!isset($_SESSION["EMAIL"])) {
-	header("Location: ./");
-	exit();
-}
-
 $caminhoAbsoluto = dirname(__FILE__) . '/../../data/user.db';
 $db = new PDO("sqlite:$caminhoAbsoluto");
 ?>
@@ -16,7 +9,7 @@ $db = new PDO("sqlite:$caminhoAbsoluto");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/materialize.min.css" />
-    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/style.css">
     <title>basicT</title>
 </head>
 <body>
