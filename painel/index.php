@@ -36,18 +36,18 @@ if (!isset($_SESSION["ID"])) {
 			<div class="card-panel">
 				<h5>Menu rápido</h5>
 				<div class="row">
-					<button class="btn blue darken-2" onclick="location.href = './newSale/'">Nova venda</button>
-					<button class="btn blue darken-2" onclick="location.href = './hisSale/'">Histórico de Vendas</button>
-					<button class="btn blue darken-2" onclick="location.href = './hisLogin/'">Histórico de Acessos</button>
+					<button class="btn blue darken-2" onclick="location.href = 'newSale/'">Nova venda</button>
+					<button class="btn blue darken-2" onclick="location.href = 'hisSale/'">Histórico de Vendas</button>
+					<button class="btn blue darken-2" onclick="location.href = 'hisLogin/'">Histórico de Acessos</button>
 				</div>
 			</div>
 			<div class="card-panel">
 				<h5>Configurações do sistema</h5>
 				<div class="row">
-					<button class="btn blue darken-2" onclick="location.href='./hisUser/'">Ver usuários já existentes</button>
-					<button class="btn blue darken-2" onclick="location.href='./cadUser/'">Cadastrar usuário</button>
-					<button class="btn blue darken-2" onclick="location.href='./rmUser/'">Deletar usuário existente</button>
-					<button class="btn red" onclick="location.href = './exit/'">Sair</button>
+					<button class="btn blue darken-2" onclick="location.href='hisUser/'">Ver usuários já existentes</button>
+					<button class="btn blue darken-2" onclick="location.href='cadUser/'">Cadastrar usuário</button>
+					<button class="btn blue darken-2" onclick="location.href='rmUser/'">Deletar usuário existente</button>
+					<button class="btn red" onclick="location.href = 'exit/'">Sair</button>
 				</div>
 			</div>
 		</div>
