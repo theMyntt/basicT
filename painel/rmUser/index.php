@@ -2,7 +2,14 @@
 $caminhoAbsoluto = dirname(__FILE__) . '/../../data/user.db';
 $db = new PDO("sqlite:$caminhoAbsoluto");
 ?>
+<?php 
+session_start(); 
 
+if (!isset($_SESSION["EMAIL"])) {
+	header("Location: ./");
+	exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

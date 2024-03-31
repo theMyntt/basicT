@@ -1,4 +1,11 @@
-<? session_start(); ?>
+<? 
+session_start(); 
+
+if (isset($_SESSION["EMAIL"])) {
+	header("Location: ./painel/");
+	exit();
+}
+?>
 
 <!DOCTYPE html>
 
@@ -10,13 +17,6 @@
 	<title>basicT</title>
 	<link rel="stylesheet" href="css/materialize.min.css" />
 	<link rel="stylesheet" href="css/style.css">
-	<style>
-		nav ul li {
-			height: 64px;
-			display: flex;
-			align-items: center;
-		}
-	</style>
 </head>
 
 <body>

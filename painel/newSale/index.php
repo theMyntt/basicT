@@ -1,3 +1,12 @@
+<?php 
+session_start(); 
+
+if (!isset($_SESSION["EMAIL"])) {
+	header("Location: ./");
+	exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
